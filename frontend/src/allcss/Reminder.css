@@ -1,0 +1,78 @@
+.reminder-container {
+  padding: 1rem;
+  /* background: #ffffff; */
+
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.date-selector {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.date-pill {
+  background: #f1f4ff;
+  border-radius: 20px;
+  padding: 10px 12px;
+  text-align: center;
+  cursor: pointer;
+  min-width: 55px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.date-pill.today {
+  border: 2px solid #ff82a9;
+}
+
+.date-pill.selected {
+  background: #ff82a9;
+  color: white;
+  font-weight: bold;
+}
+
+.date-number {
+  font-size: 1.1rem;
+}
+
+.day-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.medicine-list {
+  margin-top: 1.5rem;
+}
+
+.medicine-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.medicine-card:hover {
+  transform: translateY(-2px);
+}
+
+.pill-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.tag {
+  background: #dff0ff;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #007bff;
+}
