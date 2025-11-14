@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const medicines = [
   { name: "Paracetamol", use: "Pain relief, fever reduction" },
