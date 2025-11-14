@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
-import axios from "axios";
 import { useUser } from './UserContext';
 import api from "../api";
 import "../allcss/AddRemainder.css"; // your existing CSS
