@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CustomDietPlan from "./CustomDietPlan";
-
 function DietExercisePlan() {
   const [customPlan, setCustomPlan] = useState("");
   const [showCustomInput, setShowCustomInput] = useState(false);

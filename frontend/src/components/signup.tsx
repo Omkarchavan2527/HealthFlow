@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import api from "../api";
 const SignupPage = () => {
   const Navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const SignupPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Login Submitted:", { username, email, password });
-    const res = await axios.post("http://localhost:5000/signup", { username, email, password });
+    const res = await api.post("/signup", { username, email, password });
     console.log(res);
     if (res.data.token) {
       localStorage.setItem("token", res.data.token);

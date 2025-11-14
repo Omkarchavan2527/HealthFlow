@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../api";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from './UserContext';
@@ -17,7 +17,7 @@ const LoginPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Login Submitted:", { username, password });
-    const res = await axios.post("http://localhost:5000/login", { username, password });
+     const res = await api.post("/login", { username, password });
     console.log(res);
     if (res.data.token) {
       localStorage.setItem("token", res.data.token); // 👈 Store it

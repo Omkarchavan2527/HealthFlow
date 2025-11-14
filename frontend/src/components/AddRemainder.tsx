@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
 import axios from "axios";
 import { useUser } from './UserContext';
-
+import api from "../api";
 import "../allcss/AddRemainder.css"; // your existing CSS
 
 // 1️⃣ Define the form data shape
@@ -34,8 +34,7 @@ const onSubmit: SubmitHandler<ReminderFormData> = async (data) => {
       Frequency: data.frequency,
       createdBy:user?.id,
     };
-
-    const res = await axios.post("http://localhost:5000/add", payload); // adjust URL as needed
+    const res = await api.post("/add", payload); 
   {alert(res.data.msg)}
 
   } catch (err) {

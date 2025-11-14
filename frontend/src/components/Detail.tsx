@@ -65,14 +65,14 @@ const { user } = useUser();
             
 
             {item.title === 'Medication taken' && (
-              <div className="preview-blur text-sm h-[200px] text-blue-600 mt-2">
-                <ChartComponent type="doughnut" />
+              <div className="preview-blur text-sm h-[260px] text-blue-600 mt-2 ">
+              <ChartComponent type="doughnut" remaining={3} taken={5} />
               </div>
             )}
 
             {item.title === 'Notification' && (
               <div className="text-sm h-[200px] text-blue-600 mt-2">
-                <ChartComponent type="pie" />
+                 <ChartComponent type="pie" remaining={3} taken={5} />
               </div>
             )}
 

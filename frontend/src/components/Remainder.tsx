@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useUser } from "./UserContext";
-import axios from "axios";
 import "../allcss/Reminder.css";
+import api from "../api";
 
 // Define medicine type according to your backend schema
 interface Medicine {
@@ -31,8 +31,8 @@ const Reminder = () => {
     setLoading(true);
     try {
       const formattedDate = date.toISOString().split("T")[0]; // YYYY-MM-DD
-      const res = await axios.post<Medicine[]>(
-        "http://localhost:5000/api/medicines",
+      const res = await api.post<Medicine[]>(
+        "/api/medicines",
         {
           id: user.id,           // sending user id in the body
           date: formattedDate    // optional: send the date as well

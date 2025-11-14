@@ -27,7 +27,7 @@ const ChartComponent: React.FC<ChartProps> = ({ type, remaining, taken, title })
   const options = {
     responsive: true,
     plugins: {
-      legend: { position: 'bottom' as const },
+      legend: { position: 'left' as const },
       title: { display: true, text: title || 'Medicine Progress' },
     },
   };

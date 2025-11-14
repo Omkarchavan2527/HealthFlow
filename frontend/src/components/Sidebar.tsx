@@ -1,12 +1,12 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-
 interface SidebarProps {
   onProfilePicUpdate: (newPicUrl: string) => void;
   onCloseSidebar: () => void;
 }
 
 export default class Sidebar extends Component<SidebarProps> {
+  
   handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
